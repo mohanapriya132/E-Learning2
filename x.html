@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="x.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="x.js"></script>
+</head>
+<body>
+    <!-- <header id="header">
+		<nav>
+			<div class="logo"><img src="./images/icon/logo-logo.png" alt="logo">
+				<p style="margin-top: -13px; font-weight: bold; font-size: 10px;margin-left: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Digital Academy</p>
+			</div>
+			<ul>
+				<li><a class="active" href="">Home</a></li>
+				<li><a href="Course.html">Courses</a></li>
+				
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+			</ul>
+			<div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="./images/icon/search.png" alt="search" onclick=slide()></div>
+			<a class="get-started" href="login.html">Login</a>
+			<img src="./images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			
+			<ul>
+				<li><a href="#about_section">About</a></li>
+				<li><a href="#portfolio_section">Portfolio</a></li>
+				<li><a href="#services_section">Services</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+				<li><a href="#feedBACK">Feedback</a></li>
+			</ul>
+		</div>
+	</header>
+   -->
+   <nav>
+    <div class="logo"><img src="./images/icon/logo-logo.png" alt="logo">
+        <p style="margin-top: -13px; font-weight: bold; font-size: 10px;margin-left: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Digital Academy</p>
+    </div>
+    <ul>
+        <li><a class="active" href="">Home</a></li>
+        <li><a href="Course.html">Courses</a></li>
+        
+        <li><a href="#services_section">Services</a></li>
+        <li><a href="#contactus_section">Contact</a></li>
+    </ul>
+    <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="./images/icon/search.png" alt="search" onclick=slide()></div>
+    <a class="get-started" href="login.html">Login</a>
+    <img src="./images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+</nav>
+    <div class="awesome-payment-page" style="margin-top: 8rem">
+        <!-- Header Section -->
+        <div class="payment-header">
+            <h1><i class="fa fa-shopping-cart"></i> Checkout</h1>
+        </div>
+
+        <!-- Cart Section -->
+        <section class="cart-section" >
+            <h2>Your Course</h2>
+            <div id="cart-item" class="cart-item">
+                <div class="product-info" >
+                    <h3><i class="fa fa-book"></i> Python Bootcamp in 2024 (Beginner)</h3>
+                    <p>by Eichiro D. Lucky</p>
+                    <p class="price"><i class="fa fa-tags"></i> Rs.499</p>
+                </div>
+                <button class="delete-btn" onclick="deleteItem()" style="padding: 10px;">
+                    <i class="fa fa-trash"></i> Remove
+                </button>
+            </div>
+            <p id="empty-cart" class="empty-cart" style="display: none;">
+                <i class="fa fa-info-circle"></i> Your cart is empty.
+            </p>
+        </section>
+
+        <!-- Payment Section -->
+        <section class="payment-section">
+            <h2><i class="fa fa-credit-card"></i> Choose Payment Method</h2>
+            <div class="payment-options">
+                <button class="payment-btn google-pay">
+                    <i class="fa fa-google"></i> Google Pay
+                </button>
+                <button class="payment-btn phonepe">
+                    <i class="fa fa-mobile-alt"></i> PhonePe
+                </button>
+                <button class="payment-btn card">
+                    <i class="fa fa-credit-card"></i> Credit/Debit Card
+                </button>
+                <button class="payment-btn paypal">
+                    <i class="fa fa-paypal"></i> PayPal
+                </button>
+            </div>
+            <div class="total-section">
+                <p>Total Amount: <span id="total-price">Rs.499</span></p>
+            </div>
+            <button class="proceed-btn" onclick="showSuccess()">Proceed</button>
+        </section>
+
+        <!-- Success Section -->
+        <section id="success-message" class="success-message" >
+            <h2><i class="fa fa-check-circle"></i> Purchase Successful!</h2>
+            <p>Congratulations! Your course has been successfully purchased.</p>
+            <div class="next-steps" style="padding: 10px;">
+                <a href="#">Start Learning Now</a>
+                <a href="#">View My Courses</a>
+            </div>
+        </section>
+
+         <!-- Related Courses Section  -->
+         <section class="related-section">
+            <h2 style=" margin-top: 1rem;">Recommended Courses</h2>
+            <div class="related-courses">
+                <div class="course-card">
+                     <h3>Full-Stack Web Development</h3>
+                    <p><i class="fa fa-tags"></i> Rs.699</p> 
+                    
+                </div>
+                <div class="course-card">
+                    <h3>Data Science with Python</h3>
+                    <p><i class="fa fa-tags"></i> Rs.999</p>
+                </div>
+                <div class="course-card">
+                    <h3>Java Programming Mastery</h3>
+                    <p><i class="fa fa-tags"></i> Rs.799</p>
+                </div>
+            </div>
+        </section>  
+
+       
+    </div>
+
+    <footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<!-- <img src="images/icon/logo - Copy.png" style="width: 200px;"> -->
+				<h1 style="color: #fff; margin-bottom: 10px;">Vetri</h1>
+				<div class="logo"></div>
+				<div class="social-media">
+					<a href="#"><img src="images/icon\fb.png"></a>
+					<a href="#"><img src="images/icon\insta.png"></a>
+					<a href="#"><img src="images/icon\tt.png"></a>
+					<a href="#"><img src="images/icon\ytube.png"></a>
+					<a href="#"><img src="images/icon\linkedin.png"></a>
+				</div><br><br>
+				<p class="rights-text">Copyright © 2024 Created By xxx, xxx All Rights Reserved.</p>
+				<br><p><img src="images/icon/location.png"> Lovely Professional University<br>xxx, xxx-144401</p><br>
+				<p><img src="images/icon/phone.png"> +91-1234-567-890<br><img src="images/icon/mail.png">&nbsp; abc@gmail.com</p>
+			</div>
+			<div class="right-col">
+				<h1 style="color: #fff">Our Newsletter</h1>
+				<div class="border"></div><br>
+				<p>Enter Your Email to get our News and updates.</p>
+				<form class="newsletter-form">
+					<input class="txtb" type="email" placeholder="Enter Your Email">
+					<input class="btn" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</footer>
+
+
+    <script>
+        function deleteItem() {
+            document.getElementById('cart-item').style.display = 'none';
+            document.getElementById('empty-cart').style.display = 'block';
+        }
+
+        function showSuccess() {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

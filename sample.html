@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <title>Document</title>
+    <style>
+        .status {
+    margin-left: 10px;
+    color: gray; /* Default color */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <!-- Left: Syllabus Topics -->
+        <div class="syllabus">
+            <h2>Syllabus</h2>
+            <ul>
+                <li>
+                    <button class="topic-btn" onclick="showVideo(1)">Topic 1: Python Basics</button>
+                    <span class="status" id="status-1"></span>
+                </li>
+                <li>
+                    <button class="topic-btn" onclick="showVideo(2)">Topic 2: Functions in Python</button>
+                    <span class="status" id="status-2"></span>
+                </li>
+                <li>
+                    <button class="topic-btn" onclick="showVideo(3)">Topic 3: Loops and Conditionals</button>
+                    <span class="status" id="status-3"></span>
+                </li>
+                <!-- Repeat for other topics -->
+            </ul>
+        </div>
+    
+        <!-- Right: Video Section -->
+        <div class="video-container">
+            <h2>Video</h2>
+            <video id="video-player" controls>
+                <source src="./videos/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+    
+    
+
+    <script>
+       const videoPlayer = document.getElementById('video-player');
+let currentTopic = 1; // Default to the first topic
+
+function showVideo(topic) {
+    currentTopic = topic; // Update the current topic
+    videoPlayer.src = `./videos/video${topic}.mp4`; // Load the appropriate video
+    videoPlayer.load(); // Reload the video player
+}
+
+videoPlayer.addEventListener('ended', () => {
+    const statusIcon = document.getElementById(`status-${currentTopic}`);
+    statusIcon.innerHTML = '&#10004;'; // Add tick ✔
+    statusIcon.style.color = 'green'; // Make tick green
+});
+
+    </script>
+</body>
+</html>
